@@ -1,0 +1,24 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 4: Scrambler Handler
+
+-- Instructions: "Grab the first TWO things from the INBOX and drop them
+-- into the OUTBOX in the reverse order. Repeat until the INBOX is empty."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, JUMP
+
+-- Size: 7 commands (challenge 7)
+-- Average runtime: 21 steps (challenge 21)
+
+
+a:
+    INBOX
+    COPYTO   0
+    INBOX
+    OUTBOX
+    COPYFROM 0
+    OUTBOX
+    JUMP     a
+
+
+-- vim: set autoindent:
