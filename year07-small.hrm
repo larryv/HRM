@@ -1,0 +1,21 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 7: Zero Exterminator
+
+-- Instructions: "Send all things that ARE NOT ZERO to the OUTBOX."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP, JUMPZ
+
+-- Size: 4 commands (challenge 4)
+-- Average runtime: 23 steps (challenge 23)
+
+
+a:
+b:
+    INBOX
+    JUMPZ    b
+    OUTBOX
+    JUMP     a
+
+
+-- vim: set autoindent:
