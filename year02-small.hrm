@@ -1,0 +1,20 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 2: Busy Mail Room
+
+-- Instructions: "Grab each thing from the INBOX, and drop each one into
+-- the OUTBOX."
+
+-- Available commands: INBOX, OUTBOX, JUMP
+
+-- Size: 3 commands (challenge 3)
+-- Average runtime: 30 steps (challenge 25)
+
+
+a:
+    INBOX
+    OUTBOX
+    JUMP     a
+
+
+-- vim: set autoindent:
