@@ -1,0 +1,41 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 8: Tripler Room
+
+-- Instructions: "For each thing in the INBOX, TRIPLE it. And OUTBOX the
+-- result."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP
+
+-- Size: 20 commands (challenge 6)
+-- Average runtime: 20 steps (challenge 24)
+
+
+-- There are always exactly four boxes in the inbox.
+
+    INBOX
+    COPYTO   0
+    ADD      0
+    ADD      0
+    OUTBOX
+
+    INBOX
+    COPYTO   0
+    ADD      0
+    ADD      0
+    OUTBOX
+
+    INBOX
+    COPYTO   0
+    ADD      0
+    ADD      0
+    OUTBOX
+
+    INBOX
+    COPYTO   0
+    ADD      0
+    ADD      0
+    OUTBOX
+
+
+-- vim: set autoindent:
