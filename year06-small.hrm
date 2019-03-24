@@ -1,0 +1,23 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 6: Rainy Summer
+
+-- Instructions: "For each two things in the INBOX, add them together,
+-- and put the result in the OUTBOX."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP
+
+-- Size: 6 commands (challenge 6)
+-- Average runtime: 24 steps (challenge 24)
+
+
+a:
+    INBOX
+    COPYTO   0
+    INBOX
+    ADD      0
+    OUTBOX
+    JUMP     a
+
+
+-- vim: set autoindent:
