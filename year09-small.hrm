@@ -1,0 +1,23 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 9: Zero Preservation Initiative
+
+-- Instructions: "Send only the ZEROs to the OUTBOX."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP, JUMPZ
+
+-- Size: 5 commands (challenge 5)
+-- Average runtime: 25 steps (challenge 25)
+
+
+    JUMP     b
+a:
+    OUTBOX
+b:
+c:
+    INBOX
+    JUMPZ    a
+    JUMP     c
+
+
+-- vim: set autoindent:
