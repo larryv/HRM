@@ -1,0 +1,26 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 10: Octoplier Suite
+
+-- Instructions: "For each thing in the INBOX, multiply it by 8, and put
+-- the result in the OUTBOX."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP
+
+-- Size: 9 commands (challenge 9)
+-- Average runtime: 36 steps (challenge 36)
+
+
+a:
+    INBOX
+    COPYTO   0
+    ADD      0
+    COPYTO   0
+    ADD      0
+    COPYTO   0
+    ADD      0
+    OUTBOX
+    JUMP     a
+
+
+-- vim: set autoindent:
