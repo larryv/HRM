@@ -1,0 +1,29 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 13: Equalization Room
+
+-- Instructions: "Get two things from the INBOX. If they are EQUAL, put
+-- ONE of them in the OUTBOX. Discard non-equal pairs. Repeat!"
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
+-- JUMPZ, COMMENT
+
+-- Size: 9 commands (challenge 9)
+-- Average runtime: 27 steps (challenge 27)
+
+
+    JUMP     b
+a:
+    COPYFROM 0
+    OUTBOX
+b:
+c:
+    INBOX
+    COPYTO   0
+    INBOX
+    SUB      0
+    JUMPZ    a
+    JUMP     c
+
+
+-- vim: set autoindent:
