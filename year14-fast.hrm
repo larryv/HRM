@@ -1,0 +1,40 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 14: Maximization Room
+
+-- Instructions: "Grab TWO things from the INBOX, and put only the
+-- BIGGER of the two in the OUTBOX. If they are equal, just pick either
+-- one. Repeat!"
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
+-- JUMPZ, JUMPN, COMMENT
+
+-- Size: 16 commands (challenge 10)
+-- Average runtime: 30 steps (challenge 34)
+
+
+-- Unroll one loop iteration.
+
+    INBOX
+    COPYTO   0
+    INBOX
+    SUB      0
+    JUMPN    a
+    ADD      0
+    JUMP     c
+a:
+b:
+    COPYFROM 0
+c:
+d:
+    OUTBOX
+    INBOX
+    COPYTO   0
+    INBOX
+    SUB      0
+    JUMPN    b
+    ADD      0
+    JUMP     d
+
+
+-- vim: set autoindent:
