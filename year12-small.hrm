@@ -1,0 +1,37 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 12: Tetracontiplier
+
+-- Instructions: "For each thing in the INBOX, multiply it by 40, and
+-- put the result in the OUTBOX."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP
+
+-- Size: 14 commands (challenge 14)
+-- Average runtime: 56 steps (challenge 56)
+
+
+a:
+    INBOX
+
+-- Multiply by 5.
+    COPYTO   0
+    ADD      0
+    ADD      0
+    ADD      0
+    ADD      0
+
+-- Multiply by 8.
+    COPYTO   0
+    ADD      0
+    COPYTO   0
+    ADD      0
+    COPYTO   0
+    ADD      0
+
+-- Done!
+    OUTBOX
+    JUMP     a
+
+
+-- vim: set autoindent:
