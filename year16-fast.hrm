@@ -1,0 +1,32 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 16: Absolute Positivity
+
+-- Instructions: "Send each thing from the INBOX to the OUTBOX. BUT, if
+-- a number is negative, first remove its negative sign."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
+-- JUMPZ, JUMPN, COMMENT
+
+-- Size: 9 commands (challenge 8)
+-- Average runtime: 32 steps (challenge 36)
+
+
+-- The first item is always positive.
+
+    INBOX
+    JUMP     b
+a:
+-- Negate a negative value by subtracting it from itself twice.
+    COPYTO   0
+    SUB      0
+    SUB      0
+b:
+c:
+    OUTBOX
+    INBOX
+    JUMPN    a
+    JUMP     c
+
+
+-- vim: set autoindent:
