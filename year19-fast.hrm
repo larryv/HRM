@@ -1,0 +1,63 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 19: Countdown
+
+-- Instructions: "For each number in the INBOX, send that number to the
+-- OUTBOX, followed by all numbers down to (or up to) zero. It's
+-- a countdown!"
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 30 commands (challenge 10)
+-- Average runtime: 70 steps (challenge 82)
+
+
+-- The first item is always greater than 1.
+    INBOX
+    COPYTO   0
+    OUTBOX
+    BUMPDN   0
+a:
+    OUTBOX
+    BUMPDN   0
+    JUMPZ    b
+    JUMP     a
+b:
+    OUTBOX
+
+-- The second item is always less than -1.
+    INBOX
+    COPYTO   0
+    OUTBOX
+    BUMPUP   0
+c:
+    OUTBOX
+d:
+    BUMPUP   0
+    JUMPZ    e
+    JUMP     c
+e:
+    OUTBOX
+
+-- The third item is always 0.
+    INBOX
+f:
+g:
+    OUTBOX
+
+-- The last item varies.
+    INBOX
+    JUMPZ    g
+    COPYTO   0
+    OUTBOX
+    COPYFROM 0
+    JUMPN    d
+h:
+    BUMPDN   0
+    JUMPZ    f
+    OUTBOX
+    JUMP     h
+
+
+-- vim: set autoindent:
