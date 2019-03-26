@@ -1,0 +1,143 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 20: Multiplication Workshop
+
+-- Instructions: "For each two things in the INBOX, multiply them, and
+-- OUTBOX the result. Don't worry about negative numbers for now."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 64 commands (challenge 15)
+-- Average runtime: 86 steps (challenge 109)
+
+
+-- Tile 0: Larger value
+-- Tile 1: Partial sum
+-- Tile 2: Smaller value
+-- Tile 9: Permanent zero
+
+-- Given a pair of items, place a zero in the outbox if either item has
+-- a value of zero. Otherwise, maintain a partial sum by repeatedly
+-- adding the larger value, using the smaller value as a counter. After
+-- performing the correct number of additions, place the sum in the
+-- outbox.
+
+-- The first two items are always nonzero.
+    INBOX
+    COPYTO   0
+    COPYTO   1
+    INBOX
+    COPYTO   2
+    SUB      0
+    JUMPN    b
+    COPYFROM 2
+a:
+    COPYTO   1
+    BUMPDN   0
+    JUMPZ    e
+    COPYFROM 1
+    ADD      2
+    JUMP     a
+b:
+c:
+    BUMPDN   2
+    JUMPZ    d
+    COPYFROM 1
+    ADD      0
+    COPYTO   1
+    JUMP     c
+d:
+e:
+    COPYFROM 1
+    OUTBOX
+
+-- The third and fourth items are always nonzero.
+    INBOX
+    COPYTO   0
+    COPYTO   1
+    INBOX
+    COPYTO   2
+    SUB      0
+    JUMPN    g
+    COPYFROM 2
+f:
+    COPYTO   1
+    BUMPDN   0
+    JUMPZ    k
+    COPYFROM 1
+    ADD      2
+    JUMP     f
+g:
+h:
+i:
+    BUMPDN   2
+    JUMPZ    j
+    COPYFROM 1
+    ADD      0
+    COPYTO   1
+    JUMP     i
+j:
+k:
+l:
+    COPYFROM 1
+    OUTBOX
+
+-- The sixth item is always zero, so throw away the fifth item.
+    INBOX
+    INBOX
+    OUTBOX
+
+-- The seventh item is always zero, so throw away the eighth item.
+    INBOX
+    OUTBOX
+    INBOX
+
+-- The ninth and tenth items are always nonzero.
+    INBOX
+    COPYTO   0
+    COPYTO   1
+    INBOX
+    COPYTO   2
+    SUB      0
+-- Reuse earlier commands to reduce program size.
+    JUMPN    h
+    COPYFROM 2
+m:
+    COPYTO   1
+    BUMPDN   0
+-- Reuse earlier commands to reduce program size.
+    JUMPZ    l
+    COPYFROM 1
+    ADD      2
+    JUMP     m
+
+
+DEFINE LABEL 0
+eJyTYmBgYE34k8WUmBpVlzQ72DxV0GdDureHeCGHm1t5RGBD5fNouyq1zurqndM21UWs1Wx6vCW5RW37
+xa7MnQcn3NtoMSVkVdE0jkUfpjXNBRrFwDxhi3l73w6rNw0H89zKtXoiCwKWG6WbH2YYJKC7dOc0EJ3d
+uDf7ff38lvX1P6aC+KnNhabLm75bgthF0+xzf0z+k+Xab50l0M1TfqXzXrNw15bJAt17Z3r0HZ1fNZll
+Pkjd4eXnyrmWepfNnH+pKn5uTFPinBVdSnM+T1o4Z+c02XkH51xd4L7QZwnLfNblZlMbV9xrtln1edLm
+tUfBehdsOThnwZbnnU83Ta5O2+RcABJL2DK5WmyHe7HgLpZCzr1HC/cf8C77c1Cywe7glsm1B+tmgdRs
+vuNezHydIa/9qn2u15WDeUEXvcvCz89uvHlOrfPmudy+6eeNJl28+GOq1xXrGVa39s4E6dl2+73x5zsM
+eUZ3IXE0CkYBMgAATsqmEA;
+
+DEFINE LABEL 1
+eJyTYGBgONNz0k2gu8nxedMfm6PlBx1k8s96Ps2+F/oiSysuJccsXT5vb/bUQueC6ur+iuSWkJrQztmN
+57ozu8/07J0Z0M279FpHxNrYtnsb3zSobf9TlbkzsPjxlrl5t9atyApYzjCEQUG9+0KWipOLQOySqYJy
+5VOsbbZN6Sq1mCLbbDGlbpbpVMl1IDnxBVWZM+e7FwPxQhA/ZGGTI4heu35F161tim08e67V8uxhKby+
+3Shl0ebXcXnrNySZrP2evmO1d1nl6szurWtKp6xdzzAnYBcH2K6PR3MT3hw/txTE1jtunaV26n1i6IXn
+0ecuJYQ7Xb8XOjChMQqGKwAAxz9xqg;
+
+DEFINE LABEL 2
+eJyTYGBgiM6XVZfPq7KOy+tyj86fHiBe+CjibIle4p+qwuSXjalRyi33QhNapwfMand2mtX+SGt6h2JE
+UJdzgXDXtVqJjp3TYtvaFrxsvLXuS+3jLa3latvv5k1f8yjn0gr1bIY5DKNgFIyCQQ0A8Hgsmw;
+
+DEFINE LABEL 9
+eJyTZWBg2Olzrtzax/nMT5/+K0Auwxa/Nb3G/mqdWUHXaueEuxdfi2QpPB3blH8s/mhhZcr0OpM0tc5P
+aVsmf0pjmf8jRW/vjpTJ10H6DlXszW4tD6lxrhC9CeK3ln+3BNG2k1hEbSc1zXWYqLTl38RL1xgGEKw/
+1lW66Whqx6ajt9Zpn6g6uvxk02mFMxwXZp7jvex+9dK1kjuTr6s8sj8p9ezWOqGX12qvPt+QdOupbKj6
+w8m+b+8J+hy7KugTdU7U/96Z2cHzz6hFD6RfRsEooAYAAIuAXok;
+
+
+-- vim: set autoindent:
