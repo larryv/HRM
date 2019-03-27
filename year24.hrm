@@ -1,0 +1,50 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 24: Mod Module
+
+-- Instructions: "For each two things in the INBOX, OUTBOX the remainder
+-- that would result if you had divided the first by the second. Don't
+-- worry, you don't actually have to divide. And don't worry about
+-- negative numbers for now."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 12 commands (challenge 12)
+-- Average runtime: 54 steps (challenge 57)
+
+
+-- Tile 0: Dividend
+-- Tile 1: Divisor
+
+-- Determine the remainder by repeatedly subtracting the divisor from
+-- the dividend until the result is negative.
+
+    JUMP     b
+a:
+    COPYFROM 0
+    OUTBOX
+b:
+    INBOX
+    COPYTO   0
+    INBOX
+    COPYTO   1
+    COPYFROM 0
+c:
+    SUB      1
+    JUMPN    a
+    COPYTO   0
+    JUMP     c
+
+
+DEFINE LABEL 0
+eJyTYGBgkM87K706M6LeJlnw2oHEJY+BQgyz80MUZhQIynWUnZVeXz9Zfk6bolZ/93vjmkld7lumxoR8
+mFaYbDDdu6xq8p8ZtpOOzg/tLNwv12Z9rLiu+yJj5aVrj3Lu3S9LvXefYRSMglEwqAEA5+AsHg;
+
+DEFINE LABEL 1
+eJyTZWBgcEqcXL0vybnga+qa+MU5Zz0Fi52dnCuOOttVcbiV1k72fdmYm5DcwlMe25bbJ93OMv9ax+z1
+QV1auzj6mk6XTL107fWMkBvxc/uviC84etZ/8ecDrMuvrQYay/B6hpHZu+mlFgwTU6O4e48WrmrkXRpW
+OPsuwygYBaNg0AAAoa81EA;
+
+
+-- vim: set autoindent:
