@@ -1,0 +1,68 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 26: Small Divide
+
+-- Instructions: "For each two things in the INBOX, how many times does
+-- the second fully fit into the first? Don't worry about negative
+-- numbers, divide by zero, or remainders."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 15 commands (challenge 15)
+-- Average runtime: 71 steps (challenge 76)
+
+
+-- Tile 0: Dividend
+-- Tile 1: Divisor
+-- Tile 2: Quotient
+-- Tile 9: Permanent zero
+
+-- Repeatedly subtract the divisor from the dividend, incrementing the
+-- quotient each time, until the dividend becomes negative. Place the
+-- quotient in the outbox.
+
+    JUMP     b
+a:
+    COPYFROM 2
+    OUTBOX
+b:
+    INBOX
+    COPYTO   0
+    INBOX
+    COPYTO   1
+    COPYFROM 9
+    COPYTO   2
+c:
+    COPYFROM 0
+    SUB      1
+    JUMPN    a
+    COPYTO   0
+    BUMPUP   2
+    JUMP     c
+
+
+DEFINE LABEL 0
+eJyTYGBgkM87K706M6LeJlnw2oHEJY+BQgyz80MUZhQIynWUnZVeXz9Zfk6bolZ/93vjmkld7lumxoR8
+mFaYbDDdu6xq8p8ZtpOOzg/tLNwv12Z9rLiu+yJj5aVrj3Lu3S9LvXefYRSMglEwqAEA5+AsHg;
+
+DEFINE LABEL 1
+eJyTZWBgcEqcXL0vybnga+qa+MU5Zz0Fi52dnCuOOttVcbiV1k72fdmYm5DcwlMe25bbJ93OMv9ax+z1
+QV1auzj6mk6XTL107fWMkBvxc/uviC84etZ/8ecDrMuvrQYay/B6hpHZu+mlFgwTU6O4e48WrmrkXRpW
+OPsuwygYBaNg0AAAoa81EA;
+
+DEFINE LABEL 2
+eJxTZmBgkOjYYOJYGaN2tHy2Kk/pI60ZBVvMM7OeR6/LuNWwLkOtc3Xm50kpOV2Lb+XfWudW/npXdfX7
+vckthfs5+p5v/z0pZoPRtP5lz2YptiXOcS9+MOdPVuIcQZ9ls9pcPkzbYdXf/Ugru3G60s/q6UqcZffU
+/UoeaYkXfjYDWsvg25Pa8Xmq5LoHc7R2TVy05SDDKBgFo4DuAADKu0Sq;
+
+DEFINE LABEL 9
+eJwLYGBgmKb12sDFsNSi2PyPzXkXe3sHL2ubjf7WNlU+Xe7/jea3zNbwWbJYVXbjd9PUbXfsC/cHuPw5
+1uVmfQyolcFPd2/2KiuWwl7XgEoQ/3JUQCVLhWgtiH2oQrBqb9XBvJ/Vov6Mlfb24oW5RlpZz3XNU7UM
+vOK2mPfF7LW9ERETEh9mnxsfptd/L6xu1rTIa6tPxD3fXplSuD8z68fh2qq6EyCzpNtvqdxs14pTaI1Y
+q9CaufNe684jIPHpHf1eQV1NjvsmvjZInCOrfnlhjJrPkvkaILk/BxW1/HbPVr2/RVHr7Xojs++r21ya
+lz+P7lzalN+95HHbiaUs81mXS647sEJr1/fVZYc0N+49Pmln3QmPvdbHMk5m7pQ+d2vdlAss84Mumk29
+ePFkSeiFJZGyZ1mck05b26w/tsbQ+pCaLsMoGAVDHAAAHSGL3A;
+
+
+-- vim: set autoindent:
