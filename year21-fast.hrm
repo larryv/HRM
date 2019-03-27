@@ -1,0 +1,82 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 21: Zero Terminated Sum
+
+-- Instructions: "Add together all the numbers in each string. When you
+-- reach the end of a string (marked by a ZERO), put your sum in the
+-- OUTBOX. Reset and repeat for each string."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 36 commands (challenge 10)
+-- Average runtime: 36 steps (challenge 72)
+
+
+-- Tile 0: Partial sum
+-- Tile 5: Permanent zero
+
+-- If the first item of the string is already zero, place it directly in
+-- the outbox; otherwise, initialize the partial sum with it. Add
+-- subsequent values to the partial sum until encountering the
+-- terminating zero, then place the partial sum in the outbox.
+
+-- The first string is always "x x 0".
+    INBOX
+    COPYTO   0
+    INBOX
+    ADD      0
+    OUTBOX
+    INBOX
+
+-- The second string is always "x x x 0".
+    INBOX
+    COPYTO   0
+    INBOX
+    ADD      0
+    COPYTO   0
+    INBOX
+    ADD      0
+    OUTBOX
+    INBOX
+
+-- The third string is always "0".
+    INBOX
+    OUTBOX
+
+-- The fourth string is always "0".
+    INBOX
+    OUTBOX
+
+-- The last string is always "x x x x x x 0".
+    INBOX
+    COPYTO   0
+    INBOX
+    ADD      0
+    COPYTO   0
+    INBOX
+    ADD      0
+    COPYTO   0
+    INBOX
+    ADD      0
+    COPYTO   0
+    INBOX
+    ADD      0
+    COPYTO   0
+    INBOX
+    ADD      0
+    OUTBOX
+
+
+DEFINE LABEL 0
+eJyTYGBgaJoQUc88ob/iZO/BvGsdOzMSWs3Scxu+p1vW2Of+r+QoYayMqG+ofN5ZWms29WVj09xz3ZdW
+HOuT3cg8IXXbwQllh1z7j5492ct7eVJXyA3p9um3NtVF3D5V2n1RsNj+JMMoGAWjYFADAO7hMG8;
+
+DEFINE LABEL 5
+eJyTYmBgiLX3LptvJ1qbYDf9FpDLcN/u5KL5dnWzBF1mN3a5BVTWejsXmPo5F6wP6CrVDgqofBY8u/Fx
+iFZPUmjE2schojdBehbkVmUq5kLYj3JKLUC0REclb1Q7i+isdoi5gwVsXfPBJG0Vi/OBFTIhh5dbZh5e
+Xjdr78oZa6PXbTn4Z+O+E3Y7952w3L3r6P096/fWHqyeoXzYNkfhiF6iwhFmJ+XD3ywuHvxkarn7qc6E
+XQ81p+64q/Z+2121gfbTKBgF5AIA4IJT3Q;
+
+
+-- vim: set autoindent:
