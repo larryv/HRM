@@ -1,0 +1,47 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 23: The Littlest Number
+
+-- Instructions: "For each zero terminated string in the INBOX, send to
+-- the OUTBOX only the SMALLEST number you've seen in that string. You
+-- will never be given an empty string. Reset and repeat for each string."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 12 commands (challenge 13)
+-- Average runtime: 71 steps (challenge 75)
+
+
+-- Tile 0: Running minimum
+
+-- Maintain the minimum value seen in the current string so far. Send it
+-- to the outbox when we encounter the end of the string.
+
+    JUMP     b
+a:
+    COPYFROM 0
+    OUTBOX
+b:
+    INBOX
+    JUMP     d
+c:
+    ADD      0
+d:
+    COPYTO   0
+e:
+    INBOX
+    JUMPZ    a
+    SUB      0
+    JUMPN    c
+    JUMP     e
+
+
+DEFINE LABEL 0
+eJzTYWBguOgc03TRecnWqU4Mp8ScNrwBCjF4uJtNNQhY0/s4ZE2vQphe/42Io/OvRSZuvhbZdi4qIvM5
+SM2UKOd5BxI3TDBJ0+pRz37do5Lzvv9+Lsv8uXkRa+fmTb5+P1fvNUjdprrM7k119ifNanNfgfiG9Usi
+QTRb/+O2lv6Aqx59Ru9A/Jb+tgW/JxVO1Jr5uE1q/vyW00sSWt2XPe88ukyvv3n58+3Ny9e8ZBgFo2AU
+UBUAAF6iThI;
+
+
+-- vim: set autoindent:
