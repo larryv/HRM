@@ -1,0 +1,79 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 22: Fibonacci Visitor
+
+-- Instructions: "For each thing in the INBOX, send to the OUTBOX the
+-- full Fibonacci Sequence up to, but not exceeding that value. For
+-- example, if INBOX is 10, OUTBOX should be 1 1 2 3 5 8. What's
+-- a Fibonacci Sequence? Ask your boss, or a friendly search box."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 17 commands (challenge 19)
+-- Average runtime: 131 steps (challenge 156)
+
+
+-- I have not attempted to unroll this program.
+
+-- Tile 0: Current Fibonacci number
+-- Tile 1: "Future" Fibonacci number (to be used on next iteration)
+-- Tile 2: Upper bound, taken from the inbox
+-- Tile 9: Permanent zero
+
+a:
+-- Save the target value from the inbox, then initialize the working
+-- tiles to 1.
+    INBOX
+    COPYTO   2
+    COPYFROM 9
+    COPYTO   0
+    BUMPUP   0
+    COPYTO   1
+b:
+c:
+    COPYFROM 0
+    OUTBOX
+
+-- Generate the next Fibonacci number on tile 1 and place the current one
+-- on tile 0.
+    COPYFROM 0
+    ADD      1
+    COPYTO   1
+    SUB      0
+    COPYTO   0
+
+-- If the current number doesn't exceed the upper bound, send it to the
+-- outbox. If it does, grab the next bound from the inbox and start over.
+    SUB      2
+    JUMPN    c
+    JUMPZ    b
+    JUMP     a
+
+
+DEFINE LABEL 0
+eJwTZWBgKPd9pLXdN/EhkMmw3Xd+y7qM+S0gtqnfZHnOshAFEPtqYeH+q4VqT8MKP78D8flL7E8eL9ty
+0LnC6EBt1YZ9X2oL9+s1NJ1+X1/4FiTf3x1w1WpywFUQO3K+6OrI+QHLwxf4LOFf7L6weTnHIvuVPkss
+V4esKlsju/HrmjW7v6/eeeT/Ct7LvEsSH8bMM3rnv9j8Y+E6848MQxjcvhvTdPtu09y7d/qXTbw5ax3D
+hfV7hU/uOlpwbPexgXbbKBgFMAAAAbNYKA;
+
+DEFINE LABEL 1
+eJxTYGBgkIo4KhoT/vgRkMkQFcFRMjePowTEloj8w7e24Q8fiP2/0vzw/8rnTxsqyz6A+HZVPpfsqppO
+/6mqO7G19vMBvYb3e++16u0N7dxyUKC76XRQ19b3IHVF085dDl9w7jKIXby2ae7XNRDxlNlGB1RnP3/K
+MApGwSgYUAAACtI2gg;
+
+DEFINE LABEL 2
+eJxzYWBg+OnTVfrTh2V+vZf9yXqviNtAIYZy34Nzyn2tZxj75/blBs5vWRISUhMe2VXaktBVypA0u7Eu
+Sa+/Lmnv8QOJITdA6m2SjSbVJK/pLUm71aCezVMuXniyhLMspIalYn5LQ6XRJMZK0Zv7KyFmhyycXJ0+
+i6d8zySe8pb+gEru3oj6KZ0/pt5sv7fxZnvZIbHOo2cvdvFe9u3pv/JtiuC1ddN9LqXPOnjq8ewfh0MW
+Hp3Pvzi37+xi0VqhRQxzLi98v9d/sfv57iX9V0Bmp21yL47edquhd7f1jD0HQ1aZHdHa9eY4w6l7Z7ov
+guTjz5SmPTvpXbb98IYJDgcurWDbF7Ph0s6qoxHb286lbbp0jWEUjIIRBgCpSoJD;
+
+DEFINE LABEL 9
+eJyTZmBg2Oh/rXaj/+SVpX5rdpf6dV8ECjF89Debqh30vHNhqGTDtMiQmtOxITXH4iPq7ZPW9DIl+lwC
+qREpOlkiUmR+eGrhyQsgfnCRZBCIftIsKLe02dtjUUtE4KIW9+LnTSzznzcdPcswgGDLmZ4loRdyepdc
+ci9econP69+Ff3Zs5z6bbTnzUl/sxGV55cPnZUDqbKPfGP4Olg+L97POumNfPOm76byNi00XbQHJHU13
+L55V7l48kP4YBaOA2gAAT2tN8g;
+
+
+-- vim: set autoindent:
