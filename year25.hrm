@@ -1,0 +1,59 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 25: Cumulative Countdown
+
+-- Instructions: "For each thing in the INBOX, OUTBOX the sum of itself
+-- plus all numbers down to zero. For example, if INBOX is 3, OUTBOX
+-- should be 6, because 3 + 2 + 1 = 6."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 11 commands (challenge 12)
+-- Average runtime: 79 steps (challenge 82)
+
+
+-- Tile 0: Partial sum
+-- Tile 1: Initial value
+
+-- Save each item from the inbox to the floor. Repeatedly add its value
+-- to a partial sum and decrement it until it reaches zero, then put the
+-- partial sum in the outbox.
+
+    JUMP     c
+a:
+    COPYFROM 0
+b:
+    OUTBOX
+c:
+    INBOX
+    JUMPZ    b
+    COPYTO   1
+d:
+    COPYTO   0
+    BUMPDN   1
+    JUMPZ    a
+    ADD      0
+    JUMP     d
+
+
+DEFINE LABEL 0
+eJyTZGBgCOg2MlNueW1wqjRF51HOBpPMrO+W+hkHHTan8XiWpEkGbUhPjcrJXBO/OOd7+tVClsK9VefK
+57dOrr7SKdt8rlutk6PvzwyOvpBVvj2p2yI6jA6U1u49zl5uf1I+b+eRT2kb9jGMglEwCgYtAABJvS5P
+;
+
+DEFINE LABEL 1
+eJyTYmBgqEu65m+e+sdGJ/O98YyCFXqt5YWm1tVtLqW188OyG+81S7erbb/WYXTgXDfDKY6+ptO2kw6e
+Mpr259iLmUYHFs5ZsWPaAt6lQGMYqiZHKLf3LdZObb4X2lpeNys6f+cRxVyWs0+z284xjIJRMAoGJQAA
+ZK4wdA;
+
+DEFINE LABEL 5
+eJzzZGBgeKrC4txgdMlnldX0gEnOk30Zvbw9HLxC/Jg9bwX9MtHrn6b1fHudccyGDRaS6+baS67b4rdm
+N1AbQ0tCQKV1dUgNiP29pr/iS+3BPLPaFTH7KyMCzxf3e31KY3HekdLvdSAxN4E1IaSGNUGrhynRekZN
+suCKwvR7G1dkpW5bkPt8+/7KNbtLazN3gsw52fvdsr3vmv+xPp7yMz2iq8/0QMTZ+lOj6ide8y+ZetJN
+YxaDw8RF9vaVq7vcQXJrjtfZbTnyx6Zjb5uLyM6IQMntSyITtlRlLt0kWrt0k1bPos32s69vV9rCtzt3
+T9N+owO5x40OXDufu6fnstp21muyGzffsZ6R+eBoodaD7+kb7ypG7Lw12ff0ZWubx6f0jNcfyzViGAWj
+YBgDACzcg9o;
+
+
+-- vim: set autoindent:
