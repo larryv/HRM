@@ -1,0 +1,36 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 30: String Storage Floor
+
+-- Instructions: "Each thing in the INBOX is an address of a tile on the
+-- floor. For each address provided in the INBOX, OUTBOX the requested
+-- item from the floor and ALL FOLLOWING items on the floor until you
+-- reach a ZERO. Repeat!"
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 7 commands (challenge 7)
+-- Average runtime: 203 steps (challenge 203)
+
+
+-- Tile 24: Address of the beginning of each "string" to copy
+
+a:
+    INBOX
+    COPYTO   24
+b:
+    COPYFROM [24]
+    JUMPZ    a
+    OUTBOX
+    BUMPUP   24
+    JUMP     b
+
+
+DEFINE LABEL 24
+eJxTY2Bg6InNTeCN7a+YGJ3ZHR6ptzc88txloDBDUPS12qBowSr/GJ5yl4SmfJvkvdmf0qyznmb/ybqf
+21YUl3euXD7vcZti7pperayq6TXJJxediPNZAtL7szpg+c9qhjyzWnfX9/UpOiCx6PzJvmKdk31B7N+T
+5oftmbRzWtVkwRUg/rYpRinvpr+OS5+VGeu/+Hk0wygYBaOALgAA1ow95w;
+
+
+-- vim: set autoindent:
