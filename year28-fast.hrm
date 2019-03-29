@@ -1,0 +1,105 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 28: Three Sort
+
+-- Instructions: "For each THREE THINGS in the INBOX, send them to the
+-- OUTBOX in order from smallest to largest."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 58 commands (challenge 34)
+-- Average runtime: 78 steps (challenge 78)
+
+
+-- Tile 0: First item in each set of three
+-- Tile 1: Second item in each set of three
+-- Tile 2: Third item in each set of three
+
+
+-- Place the items on the floor immediately, compare them to each other
+-- to determine total ordering, and pick them up in order to place in
+-- the outbox.
+
+a:
+b:
+c:
+d:
+e:
+f:
+-- Copy the three items to tiles 0, 1, and 2 in the order they come out
+-- of the inbox.
+    INBOX
+    COPYTO   0
+    INBOX
+    COPYTO   1
+    INBOX
+    COPYTO   2
+    SUB      1
+    JUMPN    i
+    COPYFROM 1
+    SUB      0
+    JUMPN    g
+-- 0 <= 1 <= 2
+    COPYFROM 0
+    OUTBOX
+    COPYFROM 1
+    OUTBOX
+    COPYFROM 2
+    OUTBOX
+    JUMP     f
+g:
+-- 1 is smallest
+    COPYFROM 1
+    OUTBOX
+    COPYFROM 0
+    SUB      2
+    JUMPN    h
+-- 1 < 2 <= 0
+    COPYFROM 2
+    OUTBOX
+    COPYFROM 0
+    OUTBOX
+    JUMP     e
+h:
+-- 1 < 0 <= 2
+    COPYFROM 0
+    OUTBOX
+    COPYFROM 2
+    OUTBOX
+    JUMP     d
+i:
+    COPYFROM 0
+    SUB      2
+    JUMPN    k
+-- 2 is smallest
+    COPYFROM 2
+    OUTBOX
+    COPYFROM 1
+    SUB      0
+    JUMPN    j
+-- 2 <= 0 <= 1
+    COPYFROM 0
+    OUTBOX
+    COPYFROM 1
+    OUTBOX
+    JUMP     c
+j:
+-- 2 <= 1 <= 0
+    COPYFROM 1
+    OUTBOX
+    COPYFROM 0
+    OUTBOX
+    JUMP     b
+k:
+-- 0 <= 2 <= 1
+    COPYFROM 0
+    OUTBOX
+    COPYFROM 2
+    OUTBOX
+    COPYFROM 1
+    OUTBOX
+    JUMP     a
+
+
+-- vim: set autoindent:

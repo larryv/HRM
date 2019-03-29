@@ -1,0 +1,74 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 28: Three Sort
+
+-- Instructions: "For each THREE THINGS in the INBOX, send them to the
+-- OUTBOX in order from smallest to largest."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 34 commands (challenge 34)
+-- Average runtime: 85 steps (challenge 78)
+
+
+-- Tile 0: Smaller of the first two items in each set of three
+-- Tile 1: Larger of the first two items in each set of three
+
+    JUMP     d
+a:
+    ADD      0
+    OUTBOX
+    COPYFROM 0
+b:
+    OUTBOX
+    COPYFROM 1
+c:
+    OUTBOX
+
+-- Write the first two items to tiles 0 and 1 in increasing order. They
+-- will always be sent to the outbox in that order, so the only question
+-- is where the third item will slot in.
+d:
+    INBOX
+    COPYTO   0
+    COPYTO   1
+    INBOX
+    SUB      0
+    JUMPN    e
+    ADD      0
+    COPYTO   1
+    JUMP     f
+e:
+    ADD      0
+    COPYTO   0
+
+-- If the third item is less than the item in tile 0, send it to the
+-- outbox immediately, followed by the item on tile 0 and the item on
+-- tile 1.
+f:
+    INBOX
+    SUB      0
+    JUMPN    a
+
+-- If the third item is greater than or equal to the item on tile 0,
+-- send the latter to the outbox immediately. Then determine the order
+-- of the remaining two items and send them to the outbox in the
+-- appropriate order.
+    ADD      0
+    COPYTO   2
+    COPYFROM 0
+    OUTBOX
+    COPYFROM 2
+    SUB      1
+    JUMPN    g
+    COPYFROM 1
+    OUTBOX
+    COPYFROM 2
+    JUMP     c
+g:
+    COPYFROM 2
+    JUMP     b
+
+
+-- vim: set autoindent:
