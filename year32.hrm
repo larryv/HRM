@@ -1,0 +1,69 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 32: Inventory Report
+
+-- Instructions: "For each thing in the INBOX, send to the OUTBOX the
+total number of matching items on the FLOOR."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 16 commands (challenge 16)
+-- Average runtime: 377 steps (challenge 393)
+
+
+-- Tile 14: Permanent zero
+-- Tile 15: Pointer
+-- Tile 16: Current value to search for
+-- Tile 17: Running count
+
+    JUMP     b
+a:
+    COPYFROM 17
+    OUTBOX
+b:
+    INBOX
+    COPYTO   16
+    COPYFROM 14
+    COPYTO   15
+    COPYTO   17
+    JUMP     e
+c:
+    BUMPUP   17
+d:
+    BUMPUP   15
+e:
+    COPYFROM [15]
+    JUMPZ    a
+    SUB      16
+    JUMPZ    c
+    JUMP     d
+
+
+DEFINE LABEL 14
+eJxzYWBgmKx9KyjYWTGi13VJ5BnXFTHSDu7Fe40PzrmhWXW03d3+JFAJA5f+805JR71+EPtGhFZPX8ya
+3lv5uX0gfljhmt6phfeaJQuOFsrnWWdtSNeKa0lYEikU/SgiJlwvcWHonyzl0LYi5dCj8xXCJNfNCU/c
+PCXq9S7WhLJDbzP2Hl+Q++cYyJyttdMDqqud5/2sfrzFrHbnEZBYbsPOjNDO13EcfStiPk/VSwSJHV22
+Ial7SWHyhUVm6eILDubdndtfkTJ75zTV2f3LFs+WXBc5//l2+5VVR3+t+nNMZ4P1MbmtRgdEdq7Y0bUn
+ZFXrvg0T3PbNb+na41xwfbteYt56xYi9Kx9FHF2mFj1xkVEKwygYBSMMAADTL3tc;
+
+DEFINE LABEL 15
+eJxTZGBgSApVjFAObStKDz46Pz14+prcQJ9LQGGGhaFdpVERe7MPJ7yOq0nOTdDKYinMzIqof5uxossk
+7cdUhqSmuReij84Hqd1bpajVUXZwDogtk38vNLBYMmh+a0wIiN/SvyTSo+9ec08PA1jeoy83IWdGQvjj
+2fPDJi5aEskwCkbBKBgwAAA+mjKr;
+
+DEFINE LABEL 16
+eJzTYmBgsE9qymdI+pPFlPg9nTf2feK1yNdxy4NzEzb6783+7T27sdZbq2eLX9dijeBb64SiH2/5lLZk
+K1Abw6nSo6LdpTFqHWXOTuzlglWnSlfsAIkzVroXW9a8T8xtuBf6vEkyaHqHqH9Q1zX/c92zg7t6l0S2
+9FtndfXKbgSpvTt3eoDUfMmG2fNmrwfxZ85nyJu4SC/RfVlq1Oa1sqF562VD0zY9imAYBaNgFNAEAACm
+40aa;
+
+DEFINE LABEL 17
+eJxzZWBgKDb/nPLF7H1itYlWnKORVtwFnc8pMzTtcxeoCVapqt5rfqryvFNJ7eAccS3R1R368zdVmyzZ
+amKutAWoleGgp1Zcr6tWXKjTllRpB4a8R7YhNU9sVnQ9sdky+ZFt09zrjgHLa71vrfvme2udbuClFaoh
+DHOWhAhWPQs+WVLlszOD2fNzCsgcp8Q18SfiLq1oSbi17ldyzAadzIi1y7Inr5TP41gkWVA48Wphf8Xk
+oufRILXGdYoRpbXPo81qm/IdK32WQMS2pOo1rIlXa86MjWrPjA3q0kvs6QmpmdTFsQgknz7rnnr6rNcG
+76Zf8jGaxpBnOtV+Nkj825SA5d+mdC0GsQO67e07lx50YBgFo2AEAQCNgnFB;
+
+
+-- vim: set autoindent:
