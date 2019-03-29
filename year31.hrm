@@ -1,0 +1,43 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 31: String Reverse
+
+-- Instructions: "For each zero terminated string in the INBOX, reverse
+-- it and put the result in the OUTBOX. Repeat!"
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 10 commands (challenge 11)
+-- Average runtime: 121 steps (challenge 122)
+
+
+-- Tile 14: Pointer
+
+-- Starting on tile 1, write each string to the floor and sent it to the
+-- outbox backwards. (Starting on tile 1 allows for a slightly more
+-- compact program with no loss of speed.)
+
+a:
+b:
+    BUMPUP   14
+    INBOX
+    JUMPZ    c
+    COPYTO   [14]
+    JUMP     a
+c:
+d:
+    BUMPDN   14
+    JUMPZ    b
+    COPYFROM [14]
+    OUTBOX
+    JUMP     d
+
+
+DEFINE LABEL 14
+eJzTZGBguBZZlTktsr/idWDTad3A96+BQgxC0dZZbfE7M1RyqjJl8p0LZhT0V4QVyjaHFb7vX5wTsNwo
+XWnLr+QVO6ZE6e2dF6a3F6QnqGu6kkTHZ7OMpqa5Lxszd+Y2HDwFEucsE/RJmS3oA2L7L34ePXnhzmkx
+83L3gPieS0Nq2Jd5lxWvLU17taEw2WNvYbLz/i2pILnZ8wr3x8yzP8kwCkbBKKAZAACx10Hy;
+
+
+-- vim: set autoindent:
