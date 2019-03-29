@@ -1,0 +1,57 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 34: Vowel Incinerator
+
+-- Instructions: "Send everything from the INBOX to the OUTBOX, except
+-- for vowels."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 13 commands (challenge 13)
+-- Average runtime: 316 steps (challenge 323)
+
+
+-- Tiles 0-4: Permanent "A", "E", "I", "O", "U"
+-- Tile 5: Permanent zero
+-- Tile 6: Pointer
+-- Tile 7: Current value from inbox
+
+    JUMP     b
+a:
+    COPYFROM 7
+    OUTBOX
+b:
+c:
+    INBOX
+    COPYTO   7
+    COPYFROM 5
+    COPYTO   6
+d:
+    COPYFROM [6]
+    JUMPZ    a
+    SUB      7
+    JUMPZ    c
+    BUMPUP   6
+    JUMP     d
+
+
+DEFINE LABEL 5
+eJxzYGBgeGKTGXvdcUOStY9Zum6gWbpURGHyvDCGvM9+7/vb3QOW97rGbLjipLa93HfJ1jnhz7cDtTDc
+dEjtEIjR6gGxn2andlwqSmhlL4+ob6jkKGmodC5wrrDOul6wIelu3vvEp9mfU15l1uXkZfCUf0if37I6
+k2HO4pyA5WGFoqurqyPWgsy42KWXGND9eVJQl+xGEL+/u7/Ct4ejxGHizgyD6VtS4+duSQWJa24sTN66
+pjStepV1luMKlsK+xYptgYs2TBBadHCO/2LepY0rJNcVrru3MXtDzAbFLZNXRmxvWxC8s3Di+V3Xaifs
+asqfuqM07da2DUnPN2bGflq7Jp5hFIyCEQ4AdFVypw;
+
+DEFINE LABEL 6
+eJxTYmBg0Ah+Haca8rpnZZD9ydeB/VeAQgxZQSE1CmHuxeGRB/N4Y+tyylIP5n1I5ynPzHrctjpzwwSb
+5Ka50yLbFoDU/qw+6LC95qzn95rUKMsalsL/lRsmgMSDi+6F1lbNDp7SKRsK4udP35BkNE2t03Tqzmkg
+/odpDHmHl+cmVK9aE88wCkbBKBgQAAADIjbw;
+
+DEFINE LABEL 7
+eJxTZ2BguBbZlP8s+HNKkf/7RFvvDUnt7nuzud3ciwVdUjv6Xaqm+7o2zWX2vLTideCtdQIxt9YBtTDM
+zXtvHFmwN/t6gV5/ZEH/MpDY1MK2Ivby0rTaqg1JW2s3JGU37szQbNqb/byJpzy1mXcpSE3JVK0406nu
+xZ+nzm/5PPXPDJCY0TTrLNXZWnFS8x9FTF74KOL0khUxR5eZpTOMglEwCmgOAE/wQnA;
+
+
+-- vim: set autoindent:
