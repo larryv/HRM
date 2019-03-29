@@ -1,0 +1,27 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 29: Storage Floor
+
+-- Instructions: "Imagine each thing in the INBOX is an address. And
+-- each address refers to a tile 0-9 on the floor. Your task: For each
+-- address in the INBOX, pick up the letter at that address and OUTBOX
+-- it."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 5 commands (challenge 5)
+-- Average runtime: 25 steps (challenge 25)
+
+
+-- Tile 12: Address of the next tile from which to copy a value
+
+a:
+    INBOX
+    COPYTO   12
+    COPYFROM [12]
+    OUTBOX
+    JUMP     a
+
+
+-- vim: set autoindent:
