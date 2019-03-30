@@ -1,0 +1,60 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 35: Duplicate Removal
+
+-- Instructions: "Send everything from the INBOX to the OUTBOX, unless
+-- you've seen the same value before. Discard any duplicates."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 15 commands (challenge 17)
+-- Average runtime: 187 steps (challenge 167)
+
+
+-- Tile 12: Value being deduplicated
+-- Tile 13: Pointer
+-- Tile 14: Pointer to end of array
+
+-- Build and search an "array" of seen values.
+
+    JUMP     b
+a:
+    COPYFROM 12
+    COPYTO   [14]
+    OUTBOX
+    BUMPUP   14
+b:
+c:
+    COPYFROM 14
+    COPYTO   13
+    INBOX
+    COPYTO   12
+d:
+    BUMPDN   13
+    JUMPN    a
+    COPYFROM 12
+    SUB      [13]
+    JUMPZ    c
+    JUMP     d
+
+
+DEFINE LABEL 12
+eJzTYGBgUA0xS18T+DllfcCWVFvvpvyTbtPr+Fxf9/S77JzG53ptdbt77h5mz88HfvrsPDIvrOpoSNTn
+A/4xuXuAWhlWZ5ZaLMuOaXqarbQlLbvsEEgsJedkiUz+3myRoi2pLBV6iXoNe7OzGzlKVjWmdryvf70L
+pMajzyjFtd/6GIh9rM8s3bXfKGXfxNyEz1MzY5XmPI/2XKoVd3RZbgLDKBgFo4CmAABxI0OO;
+
+DEFINE LABEL 13
+eJxTYmBgcPb8nHLc/XUPn2vuHiCXodXDOmuLn17i8uDMWIUwrTiBmO/p/jHOBSFRMU2y4YUTl4T8mGrh
+2zQXpPZsiZFZZEFbUVze0fkgvklaROCLrBC/CcWCPsV1IX4gsUUt88Pmt5qlP2w5OAfEv9dqlCLRsSbe
+qzc1auM02dCVM2VDGUbBKBgFAwIAAq0xJA;
+
+DEFINE LABEL 14
+eJyzZ2BgeBmk1nk7XK3TJ/Ze84FE0dpfyV2lZanuxW8zjFJWZ66IeZWpGPE241bQh/SIwLqkiMBj8TEh
+AjHPoyUit6TKhjflPwidXB0fVjfrWqTgCv+YiLVt8bPXV6bMXn83r2sx0HiGvVXTA/ZWhawCsb/XbEgq
+rdWKK6h/FLG0OSJQrHN6QFevWrRr/4akpglHCxkmQtRd3x5Sc327dZbk9szYhC2zg1U2Tw94tUHUv21Z
+iN+FRbeCbs/LTYif61xwd+6aXqn5pVNCFtrP9l/sPO/Xqq7FJmu7FuetPzp/xcaq6Qu2SDaI7TjpJrYj
+U//WtrPSt7Y97xTZWTW9aX//MoZRMApGAQMAKHN2xA;
+
+
+-- vim: set autoindent:

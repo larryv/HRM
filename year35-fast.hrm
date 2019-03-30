@@ -1,0 +1,96 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 35: Duplicate Removal
+
+-- Instructions: "Send everything from the INBOX to the OUTBOX, unless
+-- you've seen the same value before. Discard any duplicates."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 39 commands (challenge 17)
+-- Average runtime: 109 steps (challenge 167)
+
+
+-- Tile 13: Value being deduplicated
+-- Tile 14: Permanent zero
+
+-- Build and search an zero-terminated "array" of seen values. All items
+-- from the inbox have a value of "A", "B", "C", "D", or "E", so the
+-- array will never contain more than five values, and we can take some
+-- shortcuts.
+
+-- Instead of using a single terminating zero and shifting it as we add
+-- new values, fill the array with zeros!
+    COPYFROM 14
+    COPYTO   4
+    COPYTO   3
+    COPYTO   2
+    COPYTO   1
+-- There will always be at least one item in the inbox, so initialize
+-- tile 0 with with the first item instead of a zero.
+    INBOX
+    COPYTO   0
+
+a:
+b:
+c:
+d:
+    OUTBOX
+e:
+f:
+g:
+h:
+i:
+-- Search for the item from the inbox against tiles 0-4 explicitly.
+    INBOX
+    COPYTO   13
+    SUB      0
+    JUMPZ    i
+    COPYFROM 1
+    JUMPZ    j
+    SUB      13
+    JUMPZ    h
+    COPYFROM 2
+    JUMPZ    k
+    SUB      13
+    JUMPZ    g
+    COPYFROM 3
+    JUMPZ    l
+    SUB      13
+    JUMPZ    f
+    COPYFROM 4
+    JUMPZ    m
+    JUMP     e
+
+-- When necessary, copy the new value to tiles 1-4 explicitly.
+j:
+    COPYFROM 13
+    COPYTO   1
+    JUMP     d
+k:
+    COPYFROM 13
+    COPYTO   2
+    JUMP     c
+l:
+    COPYFROM 13
+    COPYTO   3
+    JUMP     b
+m:
+    COPYFROM 13
+    COPYTO   4
+    JUMP     a
+
+
+DEFINE LABEL 13
+eJzTYGBgUA0xS18T+DllfcCWVFvvpvyTbtPr+Fxf9/S77JzG53ptdbt77h5mz88HfvrsPDIvrOpoSNTn
+A/4xuXuAWhlWZ5ZaLMuOaXqarbQlLbvsEEgsJedkiUz+3myRoi2pLBV6iXoNe7OzGzlKVjWmdryvf70L
+pMajzyjFtd/6GIh9rM8s3bXfKGXfxNyEz1MzY5XmPI/2XKoVd3RZbgLDKBgFo4CmAABxI0OO;
+
+DEFINE LABEL 14
+eJyTYmBgWBjqXLAw1OgAkMkQH3avWTY8pCYkyr2YNWFv9oFE66zVmdZZi3P+ZMXlMeRJFnSVShb8mCqT
+f27p3bwVO0B6Cuq/pxvWQ/QX1B91BtH1E7skHSZOr2OeUDqFrX/DPgY6ApO1XYvz1h+dv2Jj1fQFWyQb
+xHacdBPbkal/a9tZ6VvbnneK7Kya3rS/fxk93TQKRsFgBQAgojyD;
+
+
+-- vim: set autoindent:
