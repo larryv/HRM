@@ -1,0 +1,102 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 36: Alphabetizer
+
+-- Instructions: "The INBOX contains exactly two words. Determine which
+-- word comes first, if you were to order them alphabetically, and send
+-- only that word to the OUTBOX."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 30 commands (challenge 39)
+-- Average runtime: 71 steps (challenge 109)
+
+
+-- Tile 21: Character currently being compared
+-- Tile 22: Pointer into first string
+-- Tile 23: Permanent zero
+-- Tile 24: Permanent ten, for some reason
+
+    COPYFROM 23
+    COPYTO   22
+a:
+-- Copy first word to the floor.
+    INBOX
+    COPYTO   [22]
+    JUMPZ    b
+    BUMPUP   22
+    JUMP     a
+b:
+    COPYTO   22
+    JUMP     d
+
+c:
+-- If the words share a prefix, copy it to the outbox.
+    COPYFROM 21
+    OUTBOX
+    BUMPUP   22
+
+d:
+-- Compare the second word to the first word one value at a time.
+    INBOX
+    JUMPZ    h
+    COPYTO   21
+    COPYFROM [22]
+    JUMPZ    i
+    SUB      21
+    JUMPN    f
+    JUMPZ    c
+    COPYFROM 21
+
+e:
+-- If the second word lexicographically precedes the first word, copy
+-- the rest of it to the outbox immediately.
+    OUTBOX
+    INBOX
+    JUMPZ    j
+    JUMP     e
+
+f:
+g:
+-- If the first word lexicographically precedes the second word, copy
+-- the rest of it to the outbox immediately.
+    COPYFROM [22]
+    JUMPZ    k
+    OUTBOX
+    BUMPUP   22
+    JUMP     g
+
+h:
+i:
+j:
+k:
+
+
+DEFINE LABEL 21
+eJzTZmBgYE34nu4e/zklPHJFzOOQzNiP/p9Tar05Spo8bzUc8VDrdPU4Or/J89IKW+9b67b4Pd7iE5u5
+kzUhc+fu5NRtQO0MC3IvySXmbkm9n/u881GO2naQmEz+wbyphaVp3qVr4murUqMqapZEbqrLTXjTEFCp
+3ZjQ+r6eZf76eqUtILVnelKjunrX9Pb0JG4G8dv7NiQdnLAipmiaYsTrGYoRN+a/jgtZWJjMgAfcnWt+
+OHBR4X4Qm3W5uzjTiktVLsvtT4L4c7e+Npi7VU33+vZLcr27j4raHdzLX3VoL/+mo84iWSf8ZZ+dnK2a
+cXKDifaJKmuzIzyejAdiQjz2PoqYsEsvMXinfe75XZINIHO69pxbis8No2AUDEUAACUKeZk;
+
+DEFINE LABEL 22
+eJxTZ2BgWBnUlJ8ebD/7ZZDPJSCXYUnI93SpiA1JbfErYkzSnker5KyJv1r4Jyu4iKVwauG12uh8xbbV
+mUaTDiTunHYtcuc0kB7NJjVdzaYQvzcNglXaje/71zbYzwaJ/6/cYfW9Zq/tw5aDDvUTGRxAYjkzZgc/
+mzW9Ln3Wlskg/uPZmbEP5ihGzJx/K+j0kks+e1eK+m9dMzuYYRSMglFAcwAAB3VCww;
+
+DEFINE LABEL 23
+eJyzZmBguOhsZlnvVWeXGrLD6nHIXtvlwQHeG/0LkwNc7GfHh7kvBCphOO/iXGDr7Vyw0d+9GMSfUNxf
+YVflXLC9xjrrS61a9Nba+WE/q0P8eEqbHK8W2tsvzrG3V89mcS5MvxX0KW1N/Kc0hjytrPktibkrugSL
+c/ucK973/6xe0wsyy2nCUeeTvc87QeyTvfPD2vtuBVlMEfS5OzfAW2jRJR+QuMlaUf/qVa/jDqzgKbdf
+GVG/e1VqR/FarR7Nja97BHc973Tbd6+Z8cDk6n8HmvIdDmxJZdmfm3Bm973Q69tD/BS39Hvpr+fxZBgF
+o2AUYAAAJWJkJg;
+
+DEFINE LABEL 24
+eJwzZGBgyAq6p74ySE3XIOBg3kf/qunG/iGrqnwYTgGlGAJcTrp1ubW5fPQ/6nw69qwnSCwub03vrurn
+nYb1im2rGiUbUpvbipY35SZoN6ZGba+JCHSuuOQjWBzgLZMv6q+e/ShCP2NnxtfUydVlqc87S9Ka5q7L
+CFn1Ikt2o3jh612eZe/3ZjS93wsyt37iJR+2/i2Tj/U93gLi/wPyc2a4u05eeNR578oud/M1gj7Fa6cH
+fFp7L3TzWrP03ausZ9isMjrAMApGwSggGwAANsBWOg;
+
+
+-- vim: set autoindent:
