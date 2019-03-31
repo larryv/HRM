@@ -1,0 +1,98 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 40: Prime Factory
+
+-- Instructions: "For each thing in the INBOX, send its PRIME FACTORS to
+-- the OUTBOX in order from smallest to largest."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 31 commands (challenge 28)
+-- Average runtime: 354 steps (challenge 399)
+
+
+-- Tile 20: Current value being factorized
+-- Tile 21: Working tile
+-- Tile 22: Potential quotient after factoring out tile 23
+-- Tile 23: Current prime factor candidate
+-- Tile 24: Permanent zero
+
+-- Starting with two, test an integer P for divisibility into the
+-- value from the inbox, N. If P does divide evenly, place it in the
+-- outbox and continue divisibility testing with the quotient N/P. If
+-- P does not divide evenly, try again with P+1. Move on to the next
+-- value from the inbox when P becomes larger than half the dividend
+-- currently being tested.
+
+    JUMP     b
+a:
+    COPYFROM 20
+    OUTBOX
+b:
+c:
+    COPYFROM 24
+    COPYTO   23
+    BUMPUP   23
+    BUMPUP   23
+    INBOX
+    JUMP     e
+d:
+    COPYFROM 23
+    OUTBOX
+    COPYFROM 22
+e:
+    COPYTO   20
+    SUB      23
+    JUMPN    c
+    JUMP     g
+f:
+    BUMPUP   23
+    COPYFROM 20
+    SUB      23
+g:
+    SUB      23
+    JUMPN    a
+    COPYFROM 24
+    COPYTO   22
+    COPYFROM 20
+h:
+    SUB      23
+    COPYTO   21
+    JUMPN    f
+    BUMPUP   22
+    COPYFROM 21
+    JUMPZ    d
+    JUMP     h
+
+
+DEFINE LABEL 20
+eJzjZwCCJB7PuqTStJYEpS0gbmXKhqRPafPD7ubxeAoW83h6lt0Kai3/nHK0XLDKs+zc0o6ymA2cZYmb
+QWqXNqdu02zK3KndWHYoo+no2Yct/VeudUy+HtA9+fqZHo4LXr17j3P3qm0X6JZcJ9ExeeWT5murGUbB
+KBgFgwYAAKJNMzA;
+
+DEFINE LABEL 21
+eJwTZmBgKEsttdiRsqbXJllrF5DLYJ46P+xuXp0df4mRmV1VoallzWez9fU7rJY3NTk+aRb0edL8PDqj
+aXbj8qbn20Hqv03Zy+/a/9mMYRSMglEw5AAAtZoezA;
+
+DEFINE LABEL 22
+eJyTZmBgqK1yLrCsyYz9WS0Z9Keq38ut/Kjz2ZKDDrPz6+wW59jbr8vgcLNKiQmpS1oTfzihq9QpcX6L
+VYpa59PsFV1hhQmt7OX9FT+rzdLNanMTgMYxbKqrsq6u1opzrDSberRc9GZxXdXRax2vdzGMglEwCgYd
+AABAAy4k;
+
+DEFINE LABEL 23
+eJwTYmBgyMwK8XuV+ShCK4unvCz11h2gEINKTm5CWKFixK7qa/7S7TEhVzq3pE7pdC642S5a+7wps/tn
+tfUMzrK9MyULdk5TzP08iWGQg77Fl6oCF12qmjk/s3vmfOsZIQtPLuJdcmlF44qItVvXRKx9v+7Siucb
+WeY/3fRnxqPNK7oWbZ7fsnqDYNXuVW1FXEsZ8iLnM+SBzHHevze7af+lKruDdbP+HVixAyT274Bim9mR
+ydVrjp8sUT7tXDD9vHPBwPp2FIwC4gEAo+lZ+Q;
+
+DEFINE LABEL 24
+eJxzZ2Bg8NNtcoxw9PYw9TvpxuYxP+yN5YouE/MfU+2MZTdyukuu++abuBmojGGHaVepms3JkoOePOUg
+/uWoc+VG6Zeq7ucGVM4osM8VL5QMmp3f5Z6Sc9TZKJ3FuTOu3+ta5K2geWGfU5JC3YufBW+Z/DjEfWF8
+WMgqqYiYDUHRattZEzJ35mU8366S83hLdL7kOpC5W2vr7D7WSQZ9rDNK+VKr2Paz+uQi62q17SC5j3XP
+oxNaL/mEdnp7OEz09qiZdNINJO6+jMFh2gIeT9l51/zl58qGvpue0Jo/3WzquunuC9fMuLZ65cz5mxbP
+XrEjZGHuntNLcvc4rkjdlr3h4ByVzVo9c7fylMdt1Ut8tFkxYusab48DK9pcfJYcdWYYBaNgBAAAKTF6
+qA;
+
+
+-- vim: set autoindent:
