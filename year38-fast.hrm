@@ -1,0 +1,242 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 38: Digit Exploder
+
+-- Instructions: "Grab each number from the INBOX, and send its digits
+-- to the OUTBOX. For example, 123 becomes 1, 2, 3."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 150 commands (challenge 30)
+-- Average runtime: 164 steps (challenge 165)
+
+
+-- Tile 0: Initially, the number to break up; eventually, the ones digit
+-- Tile 1: Tens digit
+-- Tile 2: Hundreds digit
+
+-- Copy the item from the inbox to the floor. Maintaining
+-- a counter, repeatedly subtract 100 from the initial value until it
+-- is less than 100. Do this again for 10. The values of the counters
+-- are the hundreds and tens digits; the remainder left on tile 0 is the
+-- ones digit. When sending these to the outbox, omit leading zeros as
+-- necessary.
+
+    JUMP     u
+a:
+b:
+c:
+d:
+e:
+f:
+g:
+h:
+i:
+j:
+    COPYFROM 2
+    OUTBOX
+k:
+l:
+m:
+n:
+o:
+p:
+q:
+r:
+s:
+    COPYFROM 1
+    OUTBOX
+t:
+    COPYFROM 0
+    OUTBOX
+u:
+    INBOX
+    COPYTO   0
+    SUB      11
+    JUMPN    ad
+    COPYTO   0
+    COPYFROM 9
+    COPYTO   1
+    COPYTO   2
+    BUMPUP   2
+    COPYFROM 0
+    SUB      11
+    JUMPN    v
+    COPYTO   0
+    BUMPUP   2
+    COPYFROM 0
+    SUB      11
+    JUMPN    w
+    COPYTO   0
+    BUMPUP   2
+    COPYFROM 0
+    SUB      11
+    JUMPN    x
+    COPYTO   0
+    BUMPUP   2
+    COPYFROM 0
+    SUB      11
+    JUMPN    y
+    COPYTO   0
+    BUMPUP   2
+    COPYFROM 0
+    SUB      11
+    JUMPN    z
+    COPYTO   0
+    BUMPUP   2
+    COPYFROM 0
+    SUB      11
+    JUMPN    aa
+    COPYTO   0
+    BUMPUP   2
+    COPYFROM 0
+    SUB      11
+    JUMPN    ab
+    COPYTO   0
+    BUMPUP   2
+    COPYFROM 0
+    SUB      11
+    JUMPN    ac
+    COPYTO   0
+    BUMPUP   2
+v:
+w:
+x:
+y:
+z:
+aa:
+ab:
+ac:
+    COPYFROM 0
+    SUB      10
+    JUMPN    a
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    b
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    c
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    d
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    e
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    f
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    g
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    h
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    i
+    COPYTO   0
+    BUMPUP   1
+    JUMP     j
+ad:
+    COPYFROM 0
+    SUB      10
+    JUMPN    t
+    COPYTO   0
+    COPYFROM 9
+    COPYTO   1
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    k
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    l
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    m
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    n
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    o
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    p
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    q
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    SUB      10
+    JUMPN    r
+    COPYTO   0
+    BUMPUP   1
+    JUMP     s
+
+
+DEFINE LABEL 0
+eJwTYgCCpCWR9kmZ3QcS3Re6x7ufBwn9Sq7L+ZFilLI5bU383bxr/mGFl3zMat1dVzVe8pFrq8qMaucp
+j2rvWhzb9ny7dPvRswyjYBSMgiEJAJPhHrQ;
+
+DEFINE LABEL 1
+eJyTYWBgiJx/cM7seTuPzJs7/RaQy8DRZ8V3psfe3qtXsmFS184jIDHfnpMlPT0shee6/2QJd31OkW5/
+HfekOTVqU92SyP2VWnHBRQx5t/LPld/PXdK+IBdoXr7sxu7SLQd/VtedeF/PcGp+a9XR6R1GBxhGwSgY
+BYMKAAArTjU6;
+
+DEFINE LABEL 2
+eJxTZWBgYJ5wctHnqfazU2bvnSm+4Oh80YXT14guTNwcP9f5zOsZMfcsprx/7TSh8G35lDUvNWZpveBd
+suYlUBvDk+Y/fMotrw2WNrM4v6+fXlda230RJF5R01b0p8o+17v0e/rkIrP0uXlm6esy7HNrkkNqDifo
+9bskVE2vS7q1ziTN6EBOZt2JxTksZ0WK3M/3lrSdO1puf5JhkAP/xVpx97cUJoPYHXubHI/s22L+5+Bz
+3eUnJVXmn5FU4b7ySOvwtffG9jf+2NTfOOjQeJ3Hs/3qrSDtEydLco+L1uodL50C0qt3/P3egfXJKBgF
+DAwAF2Vqtw;
+
+DEFINE LABEL 9
+eJyTY2BgaK6wtuEsq7ObUHzU+W7e9IAFufPDnmZvSFqRdbQwJzOhNSdzy+S07IDl8nkxG0SKMneyVBTu
+V2vecvBKp97egxMi1v6exDK/ZGpqx5apzgUWU1bEOEycHpDR9MfGrHaHFdB4BuEuUf+b7StizGpz+5or
+Ds7pLg1ZxTAKRsEoGBQAAIOyNdY;
+
+DEFINE LABEL 10
+eJxTY2Bg+JGipsua8LitJ9Z94eWog6eAQgxPmlN0Cupzjayrq6ydK9pcvEslg84Xp0bdzVNsk8/rWiyT
+v2Tr1MIfh3lK3c9vr+G9/LyJ9/Ks9rZz/d1/jjlNUNtuOrVprsH01I5109uKPkzTSzSa9jy6ZtL0gIMT
+vD16ev7YaDat0APZUz9R1N9pQkSgb49Z+qKW1A6gWUs9y6yPMYyCUTAK6AIANaBC0g;
+
+DEFINE LABEL 11
+eJxzYmBg0AierbrRPzWK0WvvzCbP6Ws83J3PAIUZ7udGKL/NeKRlkqZn7JQ42bcn1j73ctTnSZej9s7k
+jVXbzppQd6Iuqe3chvRzlxVzfS71ltSd+F+ZuXNT3bmlaxvqZq1q1OrRbJpc/bIxNyG78V6oYb27q3W1
+kRlLhaTKqVJ/2cRcd3GtLHdxkF3TFnhLSc0/Ky0/V1TRaNp3y30TU6OaJrgXu/a7L3SYmLvHYkrV0Wez
+2s6JLzh6tnOp9TGmFUYHtq6ZvT57Q9PcpZtWdMltdS+O3vY8Wm5rk2PapvfGzcsny18Fmgkyu7ra3n5q
+4blylZyuxZvTfhwGiS0Fqqlc/SjiwZwfU8unmIPFRsEoGIkAACbkdcs;
+
+
+-- vim: set autoindent:
