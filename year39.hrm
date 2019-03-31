@@ -1,0 +1,70 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 39: Re-Coordinator
+
+-- Instructions: "Each number in the INBOX is an address of a tile on
+-- the floor. Send to the OUTBOX the coordinates of that tile, column
+-- first, row second. For example, an address of 6 has coordinates 2, 1."
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 14 commands (challenge 14)
+-- Average runtime: 73 steps (challenge 76)
+
+
+-- Tile 12: Row
+-- Tile 13: Column
+-- Tile 14: Permanent zero
+-- Tile 15: Permanent four
+
+-- Determine the column and row of each address by "dividing" the
+-- address by four; the quotient is the row number and the remainder is
+-- the column number. (Divide using repeated subtraction, as in earlier
+-- levels.)
+
+    JUMP     b
+a:
+    ADD      15
+    OUTBOX
+    COPYFROM 12
+    OUTBOX
+b:
+    COPYFROM 14
+    COPYTO   12
+    INBOX
+c:
+    SUB      15
+    JUMPN    a
+    COPYTO   13
+    BUMPUP   12
+    COPYFROM 13
+    JUMP     c
+
+
+DEFINE LABEL 12
+eJxTYWBg0GvYYGJcp6Z7tDxCeUaBv2xj4nQl9/hbKhKRuUbzwr5bPgvucn8XoJe40X9F10d/6xmvAwVX
+KIcmbpaIzNy5LXXLQcmCskPepUYH7KrW7H5fP3/Tnba2BcJdev393bLNZ3pYCr16V8Tw9bA432x/pPWw
+5Zri+noe6eaKo6JAqxnsqt73G9b7LDnTw3DKtf/oWYZRMApGAV0BAC/+Pt8;
+
+DEFINE LABEL 13
+eJwTY2BgSMwVVVTJcS/+mspwCshluJ8rqdJRNln+TluEsljnPXWv3jo7354A7+kdjyLutGnFfal1LvAu
+7a+4m9dfAVJfUM9SmNxyrzmqfec0sU6lLdc6dh5hGAWjYBQMCQAAwlsi9g;
+
+DEFINE LABEL 14
+eJwLYmBgSLMJ8J7lMD3A1UM29HXgo4hzMQnh52LUovlcm+aq2GbuNDFnOPXfaPZdF8PHj4rNZ9897xJx
+WyNY8o5EpOx9oHYGPcs1vVOi6maB2C+yrGc0VDbNTWhlmR/bxjBnTpv1DLm26XWpzc4FaxtK077U5iZY
+1ryOEylSi44syIxdnGOWXpj+vLMk7cfUbam31n1KKzukk2l/MjH35IXgIsFrhvUBV0Hmlk+55v9j8r1Q
+iykH85wmrNjR0p/4ECS+c/L0um9TWAo/T63LWTlzQ5LSnNdxlxcuiexcqhjxfXVCuOG6RxEgddsP5yYw
+HlgT37FXLzFgl1n6jO3uxXO3qnU+2rxmt+KWqqNxW53PRGzvvsi5N+Bq6RHey8qn7U/Knv1x+NwlyXUn
+rzjPO3b1eafXla5SgUtVmbfPasU9PK0W3bQ/IfzUniWRAbtyExhGwSgYogAAOMyaQA;
+
+DEFINE LABEL 15
+eJxzYmBgcPB6b3zQ87VBu7ua7nTHxdrSDiv0HtlWWafZTPbVtN6ZoWkt2fDc+sfUFdZ/jgGVM3TrtRWp
+2HaVunoIVv32Fqz66O9dBhL3iptcfSFatPZGxJL2mPC6WbLhAculIrR28cYePcsRf/JCSZrgtVv5gtf8
+StrOuZV/PnC0XHZjdynDnEtFGyYo5ko2fEjnKbdK6SptSRCsApkX1MVTLtY5ve5m+5KtER3v917p3Hmk
+p+fgKacJHBeKpvVfWTaL93LMvKNn+Rev2OGzJGbDiaWfJ51YKtvcvSSgEqR/0ebJ1c836u1V3yR6E8RP
+26TWeX9LRP2EXe7Ffw7a5xYcO5incdK7LOn0lskMo2AUjFAAABFXdag;
+
+
+-- vim: set autoindent:
