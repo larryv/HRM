@@ -1,0 +1,70 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+-- 41: Sorting Floor
+
+-- Instructions: "For each zero terminated string in the INBOX, SORT the
+-- contents of the string, smallest first, biggest last, and put the
+-- results in the OUTBOX. Repeat for each string!"
+
+-- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
+
+-- Size: 22 commands (challenge 34)
+-- Average runtime: 646 steps (challenge 714)
+
+
+-- Tile 22: Running minimum of values currently on the floor
+-- Tile 23: Pointer into the string on the floor
+-- Tile 24: Pointer to the end of the string on the floor
+
+-- Perform selection sort using the outbox as the sorted portion and
+-- the floor as the unsorted portion.
+
+a:
+b:
+    INBOX
+    JUMPZ    d
+    COPYTO   [24]
+    BUMPUP   24
+    JUMP     a
+c:
+    COPYFROM [22]
+    OUTBOX
+    COPYFROM 24
+    JUMPZ    b
+    COPYFROM [24]
+    COPYTO   [22]
+d:
+    BUMPDN   24
+    COPYTO   22
+    COPYTO   23
+e:
+f:
+    BUMPDN   23
+    JUMPN    c
+    COPYFROM [22]
+    SUB      [23]
+    JUMPN    e
+    COPYFROM 23
+    COPYTO   22
+    JUMP     f
+
+
+DEFINE LABEL 22
+eJzTZ2BgiIpQ67wRwTJ/ZgTvZSCXITySYU5QtNGkE3HPO10SUjtK0pa052Tm9r3I2jJZPfscWM2LrM+T
+UnJy+2YUqHW2lqd21Fat6f1ZXTX9Z3XIqu01S7ZW1EDMCu2UbQ7trJsl3NW1WLgLIhbR8ToORBdNm924
+cVrdrHXTJdflT4eYqzujcOLKmc87H89+3Oaz5F4z6/J7zQdWPG77u/J1T+Vq+9nma2I2mK/5cbhyNUT9
+KBgFo4AyAAC7YlWZ;
+
+DEFINE LABEL 23
+eJzjZGBgmFC8N1uwmGX+1UK17VcLGU4FF3FcCCx2Pw+UYvAu3WHFQAVwp00rTqxzTTyIXT+xNG3fxJBV
+DhMj1oL4vydNrv496Vz5zsknS17M/JMVP3dnBu8S6yxq2DsKRsEowA8AC+Mkqg;
+
+DEFINE LABEL 24
+eJwzY2BguBfWtZgjvmtxXVLbAquUvTN3J2v17EtS6+yMS2i9FqnYJhWh1rkwdMME1ZCDc54FS65LDUnd
+phC2Yd+1yLoTx+KPnq1McT8PNIbhVv6thlv5uXui89vOgfjihSzzxQurpgcWr+iyrl7Sblj/vDO7cU3v
+0mb72UubBVe8bDx4CqQucr71jNvzcvsWz1Zs+zF5fotr//NOj741vSd7/8zg6Hu960i//cl/E9vOmU7t
+vrhuevdF1dlNpyPnP98+c37i5pCF/V5guxYkbhZfwHDq6oJzl4UW9V9hGAWjYBQQBQCW+2ff;
+
+
+-- vim: set autoindent:
