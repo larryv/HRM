@@ -1,4 +1,4 @@
-# *Human Resource Machine* solutions
+# *Human Resource Machine* solutions #
 
 [*Human Resource Machine*][HRM] is a 2015 puzzle video game designed
 around a [visual programming language][VPL].  Dissatisfied by the game's
