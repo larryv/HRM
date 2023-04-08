@@ -10,7 +10,7 @@ Game art and text are &copy; [Tomorrow Corporation][TC] and are included
 to provide context.  My content is published from the United States of
 America using the [CC0 1.0 Universal Public Domain Dedication][CC0].
 
-[CC0]: https://creativecommons.org/publicdomain/zero/1.0
+[CC0]: https://creativecommons.org/publicdomain/zero/1.0/
 [HRM]: https://tomorrowcorporation.com/humanresourcemachine
 [TC]: https://tomorrowcorporation.com/about
 [VPL]: https://en.wikipedia.org/wiki/Visual_programming_language
