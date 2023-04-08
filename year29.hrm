@@ -2,16 +2,16 @@
 
 -- 29: Storage Floor
 
--- Instructions: "Imagine each thing in the INBOX is an address. And
+-- INSTRUCTIONS: "Imagine each thing in the INBOX is an address. And
 -- each address refers to a tile 0-9 on the floor. Your task: For each
 -- address in the INBOX, pick up the letter at that address and OUTBOX
 -- it."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 5 commands (challenge 5)
--- Average runtime: 25 steps (challenge 25)
+-- SIZE: 5 commands (challenge 5)
+-- AVERAGE RUNTIME: 25 steps (challenge 25)
 
 
 -- Tile 12: Address of the next tile from which to copy a value

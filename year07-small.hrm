@@ -2,12 +2,12 @@
 
 -- 7: Zero Exterminator
 
--- Instructions: "Send all things that ARE NOT ZERO to the OUTBOX."
+-- INSTRUCTIONS: "Send all things that ARE NOT ZERO to the OUTBOX."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP, JUMPZ
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP, JUMPZ
 
--- Size: 4 commands (challenge 4)
--- Average runtime: 23 steps (challenge 23)
+-- SIZE: 4 commands (challenge 4)
+-- AVERAGE RUNTIME: 23 steps (challenge 23)
 
 
 a:

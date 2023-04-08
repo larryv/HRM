@@ -2,15 +2,15 @@
 
 -- 23: The Littlest Number
 
--- Instructions: "For each zero terminated string in the INBOX, send to
+-- INSTRUCTIONS: "For each zero terminated string in the INBOX, send to
 -- the OUTBOX only the SMALLEST number you've seen in that string. You
 -- will never be given an empty string. Reset and repeat for each string."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 12 commands (challenge 13)
--- Average runtime: 71 steps (challenge 75)
+-- SIZE: 12 commands (challenge 13)
+-- AVERAGE RUNTIME: 71 steps (challenge 75)
 
 
 -- Tile 0: Running minimum

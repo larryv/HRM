@@ -2,14 +2,14 @@
 
 -- 1: Mail Room
 
--- Instructions: "Drag commands into this area to build a program. Your
+-- INSTRUCTIONS: "Drag commands into this area to build a program. Your
 -- program should tell your worker to grab each thing from the INBOX,
 -- and drop it into the OUTBOX."
 
--- Available commands: INBOX, OUTBOX
+-- AVAILABLE COMMANDS: INBOX, OUTBOX
 
--- Size: 6 commands (challenge 6)
--- Average runtime: 6 steps (challenge 6)
+-- SIZE: 6 commands (challenge 6)
+-- AVERAGE RUNTIME: 6 steps (challenge 6)
 
 
     INBOX

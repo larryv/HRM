@@ -2,14 +2,14 @@
 
 -- 38: Digit Exploder
 
--- Instructions: "Grab each number from the INBOX, and send its digits
+-- INSTRUCTIONS: "Grab each number from the INBOX, and send its digits
 -- to the OUTBOX. For example, 123 becomes 1, 2, 3."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 150 commands (challenge 30)
--- Average runtime: 164 steps (challenge 165)
+-- SIZE: 150 commands (challenge 30)
+-- AVERAGE RUNTIME: 164 steps (challenge 165)
 
 
 -- Tile 0: Initially, the number to break up; eventually, the ones digit

@@ -2,13 +2,13 @@
 
 -- 12: Tetracontiplier
 
--- Instructions: "For each thing in the INBOX, multiply it by 40, and
+-- INSTRUCTIONS: "For each thing in the INBOX, multiply it by 40, and
 -- put the result in the OUTBOX."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, JUMP
 
--- Size: 52 commands (challenge 14)
--- Average runtime: 52 steps (challenge 56)
+-- SIZE: 52 commands (challenge 14)
+-- AVERAGE RUNTIME: 52 steps (challenge 56)
 
 
 -- There are always exactly four items in the inbox. Multiply each one

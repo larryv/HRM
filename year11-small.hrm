@@ -2,15 +2,15 @@
 
 -- 11: Sub Hallway
 
--- Instructions: "For each two things in the INBOX, first subtract the
+-- INSTRUCTIONS: "For each two things in the INBOX, first subtract the
 -- 1st from the 2nd and put the result in the OUTBOX. AND THEN, subtract
 -- the 2nd from the 1st and put the result in the OUTBOX. Repeat."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
 -- JUMPZ
 
--- Size: 10 commands (challenge 10)
--- Average runtime: 40 steps (challenge 40)
+-- SIZE: 10 commands (challenge 10)
+-- AVERAGE RUNTIME: 40 steps (challenge 40)
 
 
 a:

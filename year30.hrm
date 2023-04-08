@@ -2,16 +2,16 @@
 
 -- 30: String Storage Floor
 
--- Instructions: "Each thing in the INBOX is an address of a tile on the
+-- INSTRUCTIONS: "Each thing in the INBOX is an address of a tile on the
 -- floor. For each address provided in the INBOX, OUTBOX the requested
 -- item from the floor and ALL FOLLOWING items on the floor until you
 -- reach a ZERO. Repeat!"
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 7 commands (challenge 7)
--- Average runtime: 203 steps (challenge 203)
+-- SIZE: 7 commands (challenge 7)
+-- AVERAGE RUNTIME: 203 steps (challenge 203)
 
 
 -- Tile 24: Address of the beginning of each "string" to copy

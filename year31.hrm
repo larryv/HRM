@@ -2,14 +2,14 @@
 
 -- 31: String Reverse
 
--- Instructions: "For each zero terminated string in the INBOX, reverse
+-- INSTRUCTIONS: "For each zero terminated string in the INBOX, reverse
 -- it and put the result in the OUTBOX. Repeat!"
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 10 commands (challenge 11)
--- Average runtime: 121 steps (challenge 122)
+-- SIZE: 10 commands (challenge 11)
+-- AVERAGE RUNTIME: 121 steps (challenge 122)
 
 
 -- Tile 14: Pointer

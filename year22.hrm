@@ -2,16 +2,16 @@
 
 -- 22: Fibonacci Visitor
 
--- Instructions: "For each thing in the INBOX, send to the OUTBOX the
+-- INSTRUCTIONS: "For each thing in the INBOX, send to the OUTBOX the
 -- full Fibonacci Sequence up to, but not exceeding that value. For
 -- example, if INBOX is 10, OUTBOX should be 1 1 2 3 5 8. What's
 -- a Fibonacci Sequence? Ask your boss, or a friendly search box."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 17 commands (challenge 19)
--- Average runtime: 131 steps (challenge 156)
+-- SIZE: 17 commands (challenge 19)
+-- AVERAGE RUNTIME: 131 steps (challenge 156)
 
 
 -- I have not attempted to unroll this program.

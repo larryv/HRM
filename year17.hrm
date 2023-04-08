@@ -2,16 +2,16 @@
 
 -- 17: Exclusive Lounge
 
--- Instructions: "For each TWO things in the INBOX: Send a 0 to the
+-- INSTRUCTIONS: "For each TWO things in the INBOX: Send a 0 to the
 -- OUTBOX if they have the same sign. (Both positive or both negative.)
 -- Send a 1 to the OUTBOX if their signs are different. Repeat until the
 -- INBOX is empty."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
 -- JUMPZ, JUMPN, COMMENT
 
--- Size: 12 commands (challenge 12)
--- Average runtime: 27 steps (challenge 28)
+-- SIZE: 12 commands (challenge 12)
+-- AVERAGE RUNTIME: 27 steps (challenge 28)
 
 
 -- Mostly a bunch of jumps. Nothing fancy.

@@ -2,16 +2,16 @@
 
 -- 24: Mod Module
 
--- Instructions: "For each two things in the INBOX, OUTBOX the remainder
+-- INSTRUCTIONS: "For each two things in the INBOX, OUTBOX the remainder
 -- that would result if you had divided the first by the second. Don't
 -- worry, you don't actually have to divide. And don't worry about
 -- negative numbers for now."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 12 commands (challenge 12)
--- Average runtime: 54 steps (challenge 57)
+-- SIZE: 12 commands (challenge 12)
+-- AVERAGE RUNTIME: 54 steps (challenge 57)
 
 
 -- Tile 0: Dividend

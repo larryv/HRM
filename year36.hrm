@@ -2,15 +2,15 @@
 
 -- 36: Alphabetizer
 
--- Instructions: "The INBOX contains exactly two words. Determine which
+-- INSTRUCTIONS: "The INBOX contains exactly two words. Determine which
 -- word comes first, if you were to order them alphabetically, and send
 -- only that word to the OUTBOX."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 30 commands (challenge 39)
--- Average runtime: 71 steps (challenge 109)
+-- SIZE: 30 commands (challenge 39)
+-- AVERAGE RUNTIME: 71 steps (challenge 109)
 
 
 -- Tile 21: Character currently being compared

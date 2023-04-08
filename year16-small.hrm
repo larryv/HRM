@@ -2,14 +2,14 @@
 
 -- 16: Absolute Positivity
 
--- Instructions: "Send each thing from the INBOX to the OUTBOX. BUT, if
+-- INSTRUCTIONS: "Send each thing from the INBOX to the OUTBOX. BUT, if
 -- a number is negative, first remove its negative sign."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
 -- JUMPZ, JUMPN, COMMENT
 
--- Size: 8 commands (challenge 8)
--- Average runtime: 34 steps (challenge 36)
+-- SIZE: 8 commands (challenge 8)
+-- AVERAGE RUNTIME: 34 steps (challenge 36)
 
 
     JUMP     c

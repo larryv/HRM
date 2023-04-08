@@ -2,14 +2,14 @@
 
 -- 35: Duplicate Removal
 
--- Instructions: "Send everything from the INBOX to the OUTBOX, unless
+-- INSTRUCTIONS: "Send everything from the INBOX to the OUTBOX, unless
 -- you've seen the same value before. Discard any duplicates."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 15 commands (challenge 17)
--- Average runtime: 187 steps (challenge 167)
+-- SIZE: 15 commands (challenge 17)
+-- AVERAGE RUNTIME: 187 steps (challenge 167)
 
 
 -- Tile 12: Value being deduplicated

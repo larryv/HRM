@@ -2,18 +2,18 @@
 
 -- 37: Scavenger Chain
 
--- Instructions: "Each pair on the floor contains: 1) data 2) the
+-- INSTRUCTIONS: "Each pair on the floor contains: 1) data 2) the
 -- address of another one of the pairs. A scrambled chain! Each thing in
 -- the INBOX is an address of one of the pairs. OUTBOX the data for that
 -- pair, and also the data in all following pairs in the chain. The
 -- chain ends when you reach a negative address. Repeat until the INBOX
 -- is empty."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 8 commands (challenge 8)
--- Average runtime: 63 steps (challenge 63)
+-- SIZE: 8 commands (challenge 8)
+-- AVERAGE RUNTIME: 63 steps (challenge 63)
 
 
 -- Tile 12: Pointer

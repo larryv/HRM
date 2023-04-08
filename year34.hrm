@@ -2,14 +2,14 @@
 
 -- 34: Vowel Incinerator
 
--- Instructions: "Send everything from the INBOX to the OUTBOX, except
+-- INSTRUCTIONS: "Send everything from the INBOX to the OUTBOX, except
 -- for vowels."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 13 commands (challenge 13)
--- Average runtime: 316 steps (challenge 323)
+-- SIZE: 13 commands (challenge 13)
+-- AVERAGE RUNTIME: 316 steps (challenge 323)
 
 
 -- Tiles 0-4: Permanent "A", "E", "I", "O", "U"

@@ -2,14 +2,14 @@
 
 -- 13: Equalization Room
 
--- Instructions: "Get two things from the INBOX. If they are EQUAL, put
+-- INSTRUCTIONS: "Get two things from the INBOX. If they are EQUAL, put
 -- ONE of them in the OUTBOX. Discard non-equal pairs. Repeat!"
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB, JUMP,
 -- JUMPZ, COMMENT
 
--- Size: 14 commands (challenge 9)
--- Average runtime: 26 steps (challenge 27)
+-- SIZE: 14 commands (challenge 9)
+-- AVERAGE RUNTIME: 26 steps (challenge 27)
 
 
     INBOX

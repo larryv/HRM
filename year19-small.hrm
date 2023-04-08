@@ -2,15 +2,15 @@
 
 -- 19: Countdown
 
--- Instructions: "For each number in the INBOX, send that number to the
+-- INSTRUCTIONS: "For each number in the INBOX, send that number to the
 -- OUTBOX, followed by all numbers down to (or up to) zero. It's
 -- a countdown!"
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 10 commands (challenge 10)
--- Average runtime: 111 steps (challenge 82)
+-- SIZE: 10 commands (challenge 10)
+-- AVERAGE RUNTIME: 111 steps (challenge 82)
 
 
 -- Technically it's only necessary to check the sign at the beginning to

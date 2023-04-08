@@ -2,15 +2,15 @@
 
 -- 41: Sorting Floor
 
--- Instructions: "For each zero terminated string in the INBOX, SORT the
+-- INSTRUCTIONS: "For each zero terminated string in the INBOX, SORT the
 -- contents of the string, smallest first, biggest last, and put the
 -- results in the OUTBOX. Repeat for each string!"
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 22 commands (challenge 34)
--- Average runtime: 646 steps (challenge 714)
+-- SIZE: 22 commands (challenge 34)
+-- AVERAGE RUNTIME: 646 steps (challenge 714)
 
 
 -- Tile 22: Running minimum of values currently on the floor

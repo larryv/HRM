@@ -2,13 +2,13 @@
 
 -- 3: Copy Floor
 
--- Instructions: "Ignore the INBOX for now, and just send the following
+-- INSTRUCTIONS: "Ignore the INBOX for now, and just send the following
 -- 3 letters to the OUTBOX: B U G"
 
--- Available commands: INBOX, OUTBOX, COPYFROM, JUMP
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, JUMP
 
--- Size: 6 commands (challenge 6)
--- Average runtime: 6 steps (challenge 6)
+-- SIZE: 6 commands (challenge 6)
+-- AVERAGE RUNTIME: 6 steps (challenge 6)
 
 
     COPYFROM 4

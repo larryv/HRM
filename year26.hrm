@@ -2,15 +2,15 @@
 
 -- 26: Small Divide
 
--- Instructions: "For each two things in the INBOX, how many times does
+-- INSTRUCTIONS: "For each two things in the INBOX, how many times does
 -- the second fully fit into the first? Don't worry about negative
 -- numbers, divide by zero, or remainders."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 15 commands (challenge 15)
--- Average runtime: 71 steps (challenge 76)
+-- SIZE: 15 commands (challenge 15)
+-- AVERAGE RUNTIME: 71 steps (challenge 76)
 
 
 -- Tile 0: Dividend

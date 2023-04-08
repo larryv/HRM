@@ -2,15 +2,15 @@
 
 -- 39: Re-Coordinator
 
--- Instructions: "Each number in the INBOX is an address of a tile on
+-- INSTRUCTIONS: "Each number in the INBOX is an address of a tile on
 -- the floor. Send to the OUTBOX the coordinates of that tile, column
 -- first, row second. For example, an address of 6 has coordinates 2, 1."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 14 commands (challenge 14)
--- Average runtime: 73 steps (challenge 76)
+-- SIZE: 14 commands (challenge 14)
+-- AVERAGE RUNTIME: 73 steps (challenge 76)
 
 
 -- Tile 12: Row

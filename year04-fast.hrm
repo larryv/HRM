@@ -2,13 +2,13 @@
 
 -- 4: Scrambler Handler
 
--- Instructions: "Grab the first TWO things from the INBOX and drop them
+-- INSTRUCTIONS: "Grab the first TWO things from the INBOX and drop them
 -- into the OUTBOX in the reverse order. Repeat until the INBOX is empty."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, JUMP
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, JUMP
 
--- Size: 18 commands (challenge 7)
--- Average runtime: 18 steps (challenge 21)
+-- SIZE: 18 commands (challenge 7)
+-- AVERAGE RUNTIME: 18 steps (challenge 21)
 
 
 -- There are always exactly six items in the inbox.

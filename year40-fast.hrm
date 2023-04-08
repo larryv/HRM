@@ -2,14 +2,14 @@
 
 -- 40: Prime Factory
 
--- Instructions: "For each thing in the INBOX, send its PRIME FACTORS to
+-- INSTRUCTIONS: "For each thing in the INBOX, send its PRIME FACTORS to
 -- the OUTBOX in order from smallest to largest."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 31 commands (challenge 28)
--- Average runtime: 354 steps (challenge 399)
+-- SIZE: 31 commands (challenge 28)
+-- AVERAGE RUNTIME: 354 steps (challenge 399)
 
 
 -- Tile 20: Current value being factorized

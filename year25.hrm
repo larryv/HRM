@@ -2,15 +2,15 @@
 
 -- 25: Cumulative Countdown
 
--- Instructions: "For each thing in the INBOX, OUTBOX the sum of itself
+-- INSTRUCTIONS: "For each thing in the INBOX, OUTBOX the sum of itself
 -- plus all numbers down to zero. For example, if INBOX is 3, OUTBOX
 -- should be 6, because 3 + 2 + 1 = 6."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 11 commands (challenge 12)
--- Average runtime: 79 steps (challenge 82)
+-- SIZE: 11 commands (challenge 12)
+-- AVERAGE RUNTIME: 79 steps (challenge 82)
 
 
 -- Tile 0: Partial sum

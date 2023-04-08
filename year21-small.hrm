@@ -2,15 +2,15 @@
 
 -- 21: Zero Terminated Sum
 
--- Instructions: "Add together all the numbers in each string. When you
+-- INSTRUCTIONS: "Add together all the numbers in each string. When you
 -- reach the end of a string (marked by a ZERO), put your sum in the
 -- OUTBOX. Reset and repeat for each string."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 9 commands (challenge 10)
--- Average runtime: 88 steps (challenge 72)
+-- SIZE: 9 commands (challenge 10)
+-- AVERAGE RUNTIME: 88 steps (challenge 72)
 
 
 -- Tile 0: Partial sum

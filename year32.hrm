@@ -2,14 +2,14 @@
 
 -- 32: Inventory Report
 
--- Instructions: "For each thing in the INBOX, send to the OUTBOX the
+-- INSTRUCTIONS: "For each thing in the INBOX, send to the OUTBOX the
 total number of matching items on the FLOOR."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 16 commands (challenge 16)
--- Average runtime: 377 steps (challenge 393)
+-- SIZE: 16 commands (challenge 16)
+-- AVERAGE RUNTIME: 377 steps (challenge 393)
 
 
 -- Tile 14: Permanent zero

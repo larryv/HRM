@@ -2,14 +2,14 @@
 
 -- 28: Three Sort
 
--- Instructions: "For each THREE THINGS in the INBOX, send them to the
+-- INSTRUCTIONS: "For each THREE THINGS in the INBOX, send them to the
 -- OUTBOX in order from smallest to largest."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 58 commands (challenge 34)
--- Average runtime: 78 steps (challenge 78)
+-- SIZE: 58 commands (challenge 34)
+-- AVERAGE RUNTIME: 78 steps (challenge 78)
 
 
 -- Tile 0: First item in each set of three

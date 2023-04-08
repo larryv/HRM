@@ -2,14 +2,14 @@
 
 -- 20: Multiplication Workshop
 
--- Instructions: "For each two things in the INBOX, multiply them, and
+-- INSTRUCTIONS: "For each two things in the INBOX, multiply them, and
 -- OUTBOX the result. Don't worry about negative numbers for now."
 
--- Available commands: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
+-- AVAILABLE COMMANDS: INBOX, OUTBOX, COPYFROM, COPYTO, ADD, SUB,
 -- BUMPUP, BUMPDN, JUMP, JUMPZ, JUMPN, COMMENT
 
--- Size: 15 commands (challenge 15)
--- Average runtime: 135 steps (challenge 109)
+-- SIZE: 15 commands (challenge 15)
+-- AVERAGE RUNTIME: 135 steps (challenge 109)
 
 
 -- Tile 0: First value
